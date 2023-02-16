@@ -1,0 +1,274 @@
+/* Extra small devices (phones, 600px and down) */
+@media (max-width: 600px) {
+
+	header {
+		display: flex;
+		justify-content: center;
+		height: 93vh;
+
+		.header-content {
+			padding: 0 10vw;
+
+			p {
+				font-size: 13px;
+			}
+		}
+	}
+
+	section.sct {
+		grid-template-columns: 100%;
+		grid-template-rows: 17% 33% 17% 33%;
+		height: 200vh;
+
+		.grid-section-content {
+
+			h1 , p , button {
+				margin-bottom: 5px;
+			}
+
+			h1 {
+				font-size: 18px;
+			}
+
+			p {
+				font-size: 13px;
+			}
+		}
+
+		div:nth-child(1) {
+			order: 0;
+		}
+
+		div:nth-child(2) {
+			order: 1;
+		}
+
+		div:nth-child(3) {
+			order: 3;
+		}
+
+		div:nth-child(4) {
+			order: 2;
+		}
+	}
+
+	div.aside {
+		grid-template-rows: 50% 50%;
+		grid-template-columns: 100%;
+
+		.details-section {
+
+			h1 {
+				font-size: 18px;
+			}
+
+			p {
+				font-size: 13px;
+			}
+		}
+	}
+
+	footer.ftr {
+		height: 60vw;
+		width: 100%;
+		overflow: hidden;
+		grid-template-columns: 100%;
+		grid-template-rows: auto 30% auto;
+
+		.ftr-details {
+			display: none;
+		}
+
+		.ftr-nav {
+			padding: 5vw 5vw 0vw 5vw;
+
+			div:nth-child(2) {
+				order: 1;
+			}
+
+			div {
+				margin-bottom: 5px;
+			}
+
+			div.ftr-nav-ctn {
+
+				.ftr-nav-icn {
+					font-size: 20px;
+					justify-content: space-evenly;
+
+					i {
+						padding: 0 7px;
+
+						&:hover {
+							transform: scale(1.2);
+						}
+					}
+				}
+
+				p {
+					font-size: 10px;
+				}
+
+				address {
+					font-size: 13px;
+				}
+			}
+		}
+
+		.ftr-cr {
+			grid-column-start: 1;
+			grid-column-end: 2;
+
+			p {
+				font-size: 9px;
+			}
+		}
+
+		.ftr-form {
+			padding: 5vw 5vw 0 5vw;
+
+			form {
+
+				label {
+					font-size: 12px;
+				}
+
+				input#ftr-email {
+					width: 300px;
+					height: 25px;
+				}
+				
+				textarea {
+					width: 300px;
+					height: 70px;
+				}
+
+				button {
+					font-size: 10px;
+				}
+			}
+		}
+	}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+	footer.ftr {
+		grid-template-rows: auto auto 10%;
+		grid-template-columns: 50% 50%;
+		height: 60vw;
+
+		.ftr-details {
+			grid-column-end: 4;
+			grid-column-start: 1;
+			padding: 5vw 5vw 0 5vw;
+		}
+
+		.ftr-form , .ftr-nav {
+			padding: 2vw 5vw 3vw 5vw;
+		}
+	}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+	
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 992px) {
+	nav {
+
+		.nav-btn {
+			display: inline-block;
+			position: absolute;
+			right: 0px;
+			top: 0px;
+
+			label {
+				display: inline-block;
+				padding: 18px 18px 17px 18px;
+
+				.fa-bars {
+					display: block;
+					color: white;
+					transform: scale(1.8);
+					transition: 0.2s;
+				}
+			}
+		}
+
+		.nav-header {
+
+			.nav-title {
+				padding: 0 10px;
+			}
+		}
+
+		.nav-links {
+			position: absolute;
+			display: flex;
+			justify-content: center;
+			text-align: center;
+			align-items: center;
+			flex-direction: column;
+			width: 100%;
+			background-color: rgba(0, 0, 0, 0.85);
+			transition: all 0.3s ease-in;
+			top: 50px;
+			height: calc(100vh - 50px);
+			overflow: hidden;
+
+			a {
+				display: block;
+				width: 100%;
+				padding: 15px 10px;
+
+				&:hover {
+					border-radius: 0;
+				}
+			}
+		}
+
+		#nav-check {
+
+			&:checked ~ .nav-btn label {
+				background-color: rgba(0, 0, 0, 0.3);
+			}
+
+			&:not(:checked) ~ .nav-links {
+				height: 0px;
+			}
+		}
+	}
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+	footer.ftr {
+		height: 45vw;
+	}
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+	footer.ftr {
+		grid-template-columns: 30% auto auto;
+		grid-template-rows: 90% 10%;
+		height: 22.5vw;
+
+		.ftr-details {
+			grid-column-start: 1;
+			grid-column-end: 2;
+			padding: 30px;
+		}
+
+		.ftr-nav {
+			padding: 30px;
+		}
+
+		.ftr-form {
+			padding: 30px;
+		}
+	}
+}
